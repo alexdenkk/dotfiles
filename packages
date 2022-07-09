@@ -1,0 +1,42 @@
+####### #     #  #####  #   ############
+#       #     # #     # #  ############
+#       #     # #       # ############
+####### #     # #       #############
+#       #     # #       # ############
+#       #     # #     # #  ############
+#        #####   #####  #   ############
+
+# list of apt packages that i use
+
+# wm and statusbar
+i3
+i3status
+
+# terminal
+kitty
+
+# player
+cmus
+
+# shell
+# i use oh-my-zsh plugin
+zsh
+
+# langs (also go)
+nim
+python3
+python3-pip
+
+# package managers
+flatpak
+snap
+
+# tools
+git
+wget
+neofetch
+flameshot
+tree
+feh
+docker.io
+docker-compose

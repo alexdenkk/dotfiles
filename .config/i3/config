@@ -1,0 +1,162 @@
+####### #     #  #####  #   ############
+#       #     # #     # #  ############
+#       #     # #       # ############
+####### #     # #       #############
+#       #     # #       # ############
+#       #     # #     # #  ############
+#        #####   #####  #   ############
+
+set $mod Mod4
+set $alt Mod1
+
+# font
+font pango:monospace 10
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec kitty
+
+# kill focused window
+bindsym $alt+F4 kill
+
+# start dmenu (a program launcher)
+bindsym $mod+Cyrillic_ve exec --no-startup-id dmenu_run
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+Cyrillic_er split h
+
+# split in vertical orientation
+bindsym $mod+Cyrillic_em split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+Cyrillic_a fullscreen toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# define names for default workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+F5 reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+F6 restart
+
+# resize window
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: $mod+r
+        bindsym $mod+Cyrillic_ka mode "default"
+}
+
+# enter resize mode $mod+r
+bindsym $mod+Cyrillic_ka mode "resize"
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        position top
+        status_command i3status
+
+        colors {
+	background #2b2b2b
+	statusline #2b2b2b
+	separator #2b2b2
+
+        # colour of border, background, and text
+		focused_workspace       #637a9e #637a9e #2b2b2b
+		active_workspace        #2b2b2b #2b2b2b #637a9e
+		inactive_workspace      #2b2b2b #2b2b2b #637a9e
+		urgent_workspace        #2b2b2b #ebcb8b #637a9e
+	}	
+}
+
+# colour of border, background, text, indicator, and child_border
+client.focused              #637a9e #637a9e #637a9e #637a9e #637a9e
+client.focused_inactive     #2b2b2b #2b2b2b #d8dee8 #2b2b2b #637a9e
+client.unfocused            #2b2b2b #2b2b2b #d8dee8 #2e3238 #637a9e
+client.urgent               #2b2b2b #2b2b2b #d8dee8 #2b2b2b #637a9e
+client.placeholder          #2b2b2b #2b2b2b #d8dee8 #2b2b2b #637a9e
+client.background           #2b2b2b
+
+# window borders
+new_window 1pixel
+for_window [class=".*"] border pixel 4
+
+# kitty/nano/cmus
+for_window [class="kitty"] floating enable
+for_window [class="kitty"] resize set 930px 460px
+for_window [class="kitty"] move position 970px 40px
+
+for_window [class="kitty" title="nano"] floating enable
+for_window [class="kitty" title="nano"] resize set 930px 1020px
+for_window [class="kitty" title="nano"] move position 20px 40px
+
+for_window [class="kitty" title="cmus"] floating enable
+for_window [class="kitty" title="cmus"] resize set 930px 540px
+for_window [class="kitty" title="cmus"] move position 970px 520px
+
+# wallpaper (with feh)
+exec "feh --bg-scale wallpapers/space.jpg"
+
+# static color (with hsetroot)
+# exec "hsetroot -solid '#637a9e'"
+
+# screenshot (with flameshot)
+bindsym --release Print exec "flameshot gui"
