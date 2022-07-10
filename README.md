@@ -2,6 +2,9 @@
 - debian
 - i3
 - i3status
+- rofi
+- dunst
+- lightdm
 - kitty
 - zsh
 - nano
