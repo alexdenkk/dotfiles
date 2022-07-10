@@ -1,0 +1,14 @@
+! ####### #     #  #####  #   ############
+! #       #     # #     # #  ############
+! #       #     # #       # ############
+! ####### #     # #       #############
+! #       #     # #       # ############
+! #       #     # #     # #  ############
+! #        #####   #####  #   ############
+
+rofi.color-enabled: true
+rofi.color-window: #2b2b2b, #2b2b2b, #2b2b2b
+rofi.color-normal: #2b2b2b, #ebeefc, #2b2b2b, #2b2b2b, #637a9e
+rofi.color-active: #2b2b2b, #ebeefc, #2b2b2b, #2b2b2b, #637a9e
+rofi.color-urgent: #2b2b2b, #ebeefc, #2b2b2b, #2b2b2b, #ebeefc
+rofi.modi: run,drun,window

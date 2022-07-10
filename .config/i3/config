@@ -12,9 +12,11 @@ set $alt Mod1
 # font
 font pango:monospace 10
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# layout
+exec "setxkbmap -option 'grp:shift_ctrl_toggle' -layout us,ru"
+
+# lock screen
+bindsym $mod+space exec i3lock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -25,8 +27,8 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $alt+F4 kill
 
-# start dmenu (a program launcher)
-bindsym $mod+Cyrillic_ve exec --no-startup-id dmenu_run
+# starts rofi program launcher
+bindsym $mod+d exec --no-startup-id "rofi -show run"
 
 # change focus
 bindsym $mod+Left focus left
@@ -48,9 +50,6 @@ bindsym $mod+Cyrillic_em split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+Cyrillic_a fullscreen toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
 
 # define names for default workspaces
 set $ws1 "1"
@@ -155,7 +154,7 @@ for_window [class="kitty" title="cmus"] move position 970px 520px
 # wallpaper (with feh)
 exec "feh --bg-scale wallpapers/space.jpg"
 
-# static color (with hsetroot)
+# static color (need hsetroot)
 # exec "hsetroot -solid '#637a9e'"
 
 # screenshot (with flameshot)

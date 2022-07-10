@@ -32,6 +32,9 @@ flatpak
 snap
 
 # tools
+lightdm
+rofi
+dunst
 git
 wget
 neofetch
