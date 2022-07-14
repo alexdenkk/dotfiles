@@ -43,13 +43,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Cyrillic_er split h
+bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+Cyrillic_em split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+Cyrillic_a fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # define names for default workspaces
 set $ws1 "1"
@@ -100,11 +100,11 @@ mode "resize" {
         bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: $mod+r
-        bindsym $mod+Cyrillic_ka mode "default"
+        bindsym $mod+r mode "default"
 }
 
 # enter resize mode $mod+r
-bindsym $mod+Cyrillic_ka mode "resize"
+bindsym $mod+r mode "resize"
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -122,7 +122,7 @@ bar {
 		focused_workspace       #637a9e #637a9e #2b2b2b
 		active_workspace        #2b2b2b #2b2b2b #637a9e
 		inactive_workspace      #2b2b2b #2b2b2b #637a9e
-		urgent_workspace        #2b2b2b #ebcb8b #637a9e
+		urgent_workspace        #ebcb8b #ebcb8b #2b2b2b
 	}	
 }
 

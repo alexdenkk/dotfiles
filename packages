@@ -27,10 +27,6 @@ nim
 python3
 python3-pip
 
-# package managers
-flatpak
-snap
-
 # tools
 lightdm
 rofi
