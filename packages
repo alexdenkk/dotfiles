@@ -1,0 +1,30 @@
+# apt packages list
+
+# term
+kitty
+
+# shell
+zsh
+
+# docker
+docker.io
+docker-compose
+
+# python
+python3
+python3-pip
+
+# pkg
+plasma-discover-backend-flatpak
+flatpak
+
+# other
+tree
+git
+curl
+wget
+htop
+ranger
+cmatrix
+neofetch
+flameshot
