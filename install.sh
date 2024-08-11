@@ -25,13 +25,13 @@
 # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠈⠛⠋⠀⠀⠀⠀⠀
 
 # installing packages from 'packages' file
-apt-get install $(grep -vE "^\s*#" packages  | tr "\n" " ")
+apt install $(grep -vE "^\s*#" packages  | tr "\n" " ")
 
 # installing packages from flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install org.telegram.desktop
 flatpak install com.valvesoftware.Steam
-flatpak install flathub io.github.Figma_Linux.figma_linux 
+flatpak install flathub io.github.Figma_Linux.figma_linux
 
 # installing go
 version=1.22.4
@@ -45,3 +45,6 @@ mv go /usr/local
 curl https://getmic.ro | bash
 mv micro /usr/bin
 
+# installing plugins for micro
+micro --plugin install go
+micro --plugin install jump
