@@ -16,3 +16,7 @@ micro
 chromium
 docker
 docker-cli-compose
+flameshot
+tree
+curl
+wget
