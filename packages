@@ -1,6 +1,6 @@
 # apk packages list
 
-i3
+i3wm
 i3status
 i3-lock
 lightdm
