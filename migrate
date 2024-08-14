@@ -2,11 +2,11 @@
 
 mkdir .config .config/i3 .config/i3status .config/dunst .config/kitty
 
-cp -f /home/$(whoami)/.config/i3/config .config/i3/
-cp -f /home/$(whoami)/.config/i3status/config .config/i3status/
+cp -f $HOME/.config/i3/config .config/i3/
+cp -f $HOME/.config/i3status/config .config/i3status/
 
-cp -f /home/$(whoami)/.config/dunst/dunstrc .config/dunst
+cp -f $HOME/.config/dunst/dunstrc .config/dunst
 
-cp -f /home/$(whoami)/.config/kitty/* .config/kitty
+cp -f $HOME/.config/kitty/* .config/kitty
 
-cp -f /home/$(whoami)/.zshrc .
+cp -f $HOME/.zshrc .

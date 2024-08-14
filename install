@@ -15,3 +15,10 @@ micro --plugin install jump
 
 # installing ufetch
 doas mv ufetch /usr/bin/
+
+# installing oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+cp -f .zshrc $HOME
+
+cp -f -r .config/* $HOME/.config
