@@ -34,6 +34,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 alias c="clear"
+alias ls="ls -a"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go-pkg

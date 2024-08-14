@@ -25,26 +25,17 @@
 # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠈⠛⠋⠀⠀⠀⠀⠀
 
 # installing packages from 'packages' file
-apt install $(grep -vE "^\s*#" packages  | tr "\n" " ")
+doas apk add $(grep -vE "^\s*#" packages  | tr "\n" " ")
 
 # installing packages from flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install org.telegram.desktop
-flatpak install com.valvesoftware.Steam
-flatpak install flathub io.github.Figma_Linux.figma_linux
-
-# installing go
-version=1.22.4
-
-rm -rf /usr/local/go
-wget https://go.dev/dl/go$version.linux-amd64.tar.gz
-tar -xvf go$version.linux-amd64.tar.gz 
-mv go /usr/local 
-
-#installing micro
-curl https://getmic.ro | bash
-mv micro /usr/bin
+doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+doas flatpak install org.telegram.desktop
+doas flatpak install com.valvesoftware.Steam
+doas flatpak install flathub com.discordapp.Discord
 
 # installing plugins for micro
 micro --plugin install go
 micro --plugin install jump
+
+# installing ufetch
+doas mv ufetch /usr/bin/

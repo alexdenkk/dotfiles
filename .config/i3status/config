@@ -6,7 +6,7 @@ general {
 }
 
 order += "cpu_temperature 0"
-order += "wireless wlp1s0"
+order += "wireless wlan0"
 order += "volume master"
 order += "battery 1"
 order += "time"
@@ -16,7 +16,7 @@ cpu_temperature 0 {
 	path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
-wireless wlp1s0 {
+wireless wlan0 {
 	format_up = "<span background='#a277ff'>  %essid  </span>"
 	format_down = "<span background='#a277ff'>  disconnected  </span>"
 }
