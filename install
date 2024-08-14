@@ -22,3 +22,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cp -f .zshrc $HOME
 
 cp -f -r .config/* $HOME/.config
+
+
+mkdir $HOME/wallpapers
+cp -f wallpapers/* $HOME/wallpapers
