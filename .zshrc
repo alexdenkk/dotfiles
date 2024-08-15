@@ -44,4 +44,4 @@ export SHELL=/bin/zsh
 
 setxkbmap -layout us,ru -option 'grp:rctrl_toggle'
 
-neofetch
+ufetch

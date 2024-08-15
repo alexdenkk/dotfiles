@@ -36,7 +36,7 @@ floating_modifier $super
 
 # autostart
 exec --no-startup-id picom -CGb
-exec --no-startup-id feh --bg-fill /home/alexdenkk/wallpapers/mountains.jpg
+exec --no-startup-id feh --bg-fill /home/alexdenkk/wallpapers/tree.jpg
 exec --no-startup-id /usr/libexec/pipewire-launcher
 
 # terminal
@@ -44,13 +44,13 @@ bindsym $super+Return exec kitty
 
 # start dmenu (a program launcher)
 bindsym $super+d exec --no-startup-id "dmenu_run -i -l 10 -fn 'NotoMonoRegular:bold:pixelsize=14' \
--nb '#252525' -nf '#a277ff' -sb '#a277ff' -sf '#252525'"
+-nb '#21202e' -nf '#a277ff' -sb '#a277ff' -sf '#21202e'"
 
-# common apps keybinds
+# apps keybinds
 bindsym Print exec flameshot gui
-bindsym $super+l exec i3lock -i /home/alexdenkk/wallpapers/levi.png
+bindsym $super+l exec i3lock -i /home/alexdenkk/wallpapers/tree.png
 bindsym $super+w exec flatpak run com.vivaldi.Vivaldi
-bindsym $super+t exec flatpak run org.telegram.desktop
+bindsym $super+t exec telegram-desktop
 bindsym $super+p exec flatpak run com.discordapp.Discord
 
 # change volume and brightness
@@ -142,14 +142,14 @@ bar {
 	strip_workspace_numbers yes
 
 	colors {
-		background #252525
-		statusline #252525
-		separator #252525
+		background #21202e
+		statusline #21202e
+		separator #21202e
 
-		focused_workspace #a277ff #a277ff #252525
-		active_workspace #a277ff #a277ff #252525
-		inactive_workspace #252525 #252525 #a277ff
-		urgent_workspace #252525 #a277ff #252525
+		focused_workspace #a277ff #a277ff #21202e
+		active_workspace #a277ff #a277ff #21202e
+		inactive_workspace #21202e #21202e #a277ff
+		urgent_workspace #21202e #a277ff #21202e
 	}
 }
 
@@ -158,8 +158,8 @@ client.focused #a277ff #a277ff #a277ff #a277ff #a277ff
 client.focused_inactive #73daca #73daca #73daca #73daca #73daca
 client.unfocused #73daca #73daca #73daca #73daca #73daca
 client.urgent #73daca #73daca #73daca #73daca #73daca
-client.placeholder #252525 #252525 #252525 #252525 #252525
-client.background #252525
+client.placeholder #21202e #21202e #21202e #21202e #21202e
+client.background #21202e
 
 # window rules
 for_window [class=".*"] border pixel 0

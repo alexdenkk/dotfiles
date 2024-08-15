@@ -5,8 +5,6 @@ doas apk add $(grep -vE "^\s*#" packages  | tr "\n" " ")
 
 # installing packages from flatpak
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-doas flatpak install org.telegram.desktop -y
-doas flatpak install com.valvesoftware.Steam -y
 doas flatpak install flathub com.discordapp.Discord -y
 
 # installing plugins for micro

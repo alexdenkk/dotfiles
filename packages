@@ -1,4 +1,4 @@
-# apk packages list
+# packages list
 
 i3wm
 i3status
@@ -20,3 +20,5 @@ flameshot
 tree
 curl
 wget
+telegram-desktop
+btop
