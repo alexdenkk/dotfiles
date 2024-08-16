@@ -1,9 +1,9 @@
 #!/bin/sh
 
-mkdir .config .config/i3 .config/i3status .config/dunst .config/kitty
+mkdir .config .config/i3 .config/polybar .config/dunst .config/kitty
 
 cp -f $HOME/.config/i3/config .config/i3/
-cp -f $HOME/.config/i3status/config .config/i3status/
+cp -f $HOME/.config/polybar/config.ini .config/polybar/
 
 cp -f $HOME/.config/dunst/dunstrc .config/dunst
 

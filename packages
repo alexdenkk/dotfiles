@@ -1,7 +1,7 @@
 # packages list
 
 i3wm
-i3status
+polybar
 i3-lock
 lightdm
 picom
