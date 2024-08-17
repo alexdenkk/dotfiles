@@ -42,6 +42,4 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 export SHELL=/bin/zsh
 
-setxkbmap -layout us,ru -option 'grp:rctrl_toggle'
-
 ufetch
