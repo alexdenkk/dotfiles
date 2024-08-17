@@ -36,10 +36,6 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias ls="ls -a"
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go-pkg
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
 export SHELL=/bin/zsh
 
 ufetch
