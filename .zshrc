@@ -36,6 +36,10 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias ls="ls -a"
 
+alias gob="go build"
+alias goi="go mod init"
+alias got="go mod tidy"
+
 export SHELL=/bin/zsh
 
 ufetch

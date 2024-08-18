@@ -7,10 +7,6 @@ doas apk add $(grep -vE "^\s*#" packages  | tr "\n" " ")
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 doas flatpak install flathub com.discordapp.Discord -y
 
-# installing plugins for micro
-micro --plugin install go
-micro --plugin install jump
-
 # installing ufetch
 doas mv ufetch /usr/bin/
 
