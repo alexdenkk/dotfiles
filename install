@@ -6,6 +6,7 @@ doas apk add $(grep -vE "^\s*#" packages  | tr "\n" " ")
 # installing packages from flatpak
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 doas flatpak install flathub com.discordapp.Discord -y
+doas flatpak install flathub com.vivaldi.Vivaldi -y
 
 # installing ufetch
 doas mv ufetch /usr/bin/
