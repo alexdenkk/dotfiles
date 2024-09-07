@@ -137,7 +137,7 @@ mode "resize" {
 exec --no-startup-id polybar alexdenkk
 
 # colour of border, background, text, indicator, and child_border
-client.focused #a277ff #a277ff #a277ff #a277ff #a277ff
+client.focused #21202e #21202e #21202e #a277ff #21202e
 client.focused_inactive #73daca #73daca #73daca #73daca #73daca
 client.unfocused #73daca #73daca #73daca #73daca #73daca
 client.urgent #73daca #73daca #73daca #73daca #73daca
@@ -147,7 +147,7 @@ client.background #21202e
 # window rules
 for_window [class=".*"] border pixel 0
 hide_edge_borders smart
-gaps inner 16
+gaps inner 0
 
 # kitty
 exec kitty
