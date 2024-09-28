@@ -6,10 +6,9 @@ doas apk add $(grep -vE "^\s*#" packages  | tr "\n" " ")
 # installing packages from flatpak
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 doas flatpak install flathub com.discordapp.Discord -y
-doas flatpak install flathub com.vivaldi.Vivaldi -y
 
-# installing ufetch
-doas mv ufetch /usr/bin/
+# installing flowetch
+doas mv flowetch /usr/bin/
 
 # installing oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
