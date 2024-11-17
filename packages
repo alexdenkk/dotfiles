@@ -13,7 +13,7 @@ zsh
 go
 flatpak
 neovim
-firefox
+chromium
 docker
 docker-cli-compose
 flameshot
