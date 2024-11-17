@@ -36,7 +36,7 @@ floating_modifier $super
 
 # autostart
 exec --no-startup-id picom -CGb
-exec --no-startup-id feh --bg-fill /home/alexdenkk/wallpapers/town.jpg
+exec --no-startup-id feh --bg-fill /home/alexdenkk/wallpapers/wanderer.jpg
 exec --no-startup-id /usr/libexec/pipewire-launcher
 exec --no-startup-id setxkbmap -layout us,ru -option 'grp:rctrl_toggle'
 
@@ -45,15 +45,15 @@ bindsym $super+Return exec kitty
 
 # start dmenu (a program launcher)
 bindsym $super+d exec --no-startup-id "dmenu_run -i -l 10 -fn 'NotoMonoRegular:bold:pixelsize=14' \
--nb '#21202e' -nf '#a277ff' -sb '#a277ff' -sf '#21202e'"
+-nb '#1e1e2e' -nf '#cdd6f4' -sb '#cdd6f4' -sf '#1e1e2e'"
 
 # apps keybinds
 bindsym Print exec flameshot gui
-bindsym $super+l exec i3lock -i /home/alexdenkk/wallpapers/autumn.png
-bindsym $super+w exec firefox
+bindsym $super+l exec i3lock -i /home/alexdenkk/wallpapers/street.png
+bindsym $super+w exec chromium
 bindsym $super+t exec telegram-desktop
-bindsym $super+p exec flatpak run com.discordapp.Discord
 bindsym $super+b exec flatpak run com.beavernotes.beavernotes
+bindsym $super+s exec flatpak run com.valvesoftware.Steam
 
 # change volume and brightness
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
